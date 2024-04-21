@@ -1,11 +1,11 @@
-import ImageGenerator from "./page/ImageGenerator"
+import SearchSong from "./page/SearchSong"
 
 function App() {
  
 
   return (
     <>
-      <ImageGenerator />
+      <SearchSong />
     </>
   )
 }

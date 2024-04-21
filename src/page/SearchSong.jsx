@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-function MusicSearcher() {
+function SearchSong() {
   const inputRef = useRef(null);
   const [inputEmpty, setInputEmpty] = useState("");
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ function MusicSearcher() {
   
 
   return (
-    <div className="min-h-screen w-full bg-[#302F46]">
+    <div className="min-h-screen text-white w-full bg-[#302F46]">
       <div className='m-auto md:w-[50%]'>
         <div className='m-auto text-center px-1 md:flex pt-6 md:justify-center md:items-center w-full '>
           <input ref={inputRef} className='w-full py-4 pr-2 text-[17px] mb-2 border-2  border-[#D97807] pl-4 text-gray-400 rounded-full bg-transparent outline-none' type="text" placeholder="Enter song" />
@@ -63,9 +63,9 @@ function MusicSearcher() {
             <h2>Tracks:</h2>
             {tracks.map((track, index) => (
               <div key={index}>
+                <img src={track.track.images.coverart} alt={`Cover for ${track.track.title}`} />
                 <p>Song Name: {track.track.title}</p>
                 <p>Artist: {track.track.subtitle}</p>
-                <img src={track.track.images.coverart} alt={`Cover for ${track.track.title}`} />
                 <p>Link: <a href={track.track.url} target="_blank" rel="noopener noreferrer">{track.track.url}</a></p>
               </div>
             ))}
@@ -76,4 +76,4 @@ function MusicSearcher() {
   );
 }
 
-export default MusicSearcher;
+export default SearchSong;
