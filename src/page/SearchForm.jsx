@@ -49,18 +49,18 @@ function SearchSong() {
   
 
   return (
-    <div className="min-h-screen text-white bg-gradient-to-b from-blue-500 to-blue-700">
-      <div className='m-auto md:w-[40%] w-full'>
-        <div className='m-auto text-center px-1 flex pt-6 md:justify-center md:items-center w-full '>
-          <input ref={inputRef} className='w-full py-3 pr-2 text-[17px] border-2  border-white pl-4 text-gray-500 rounded-full bg-white outline-none' type="text" placeholder="Enter song" />
+    <div className="min-h-screen text-white bg-[#DEDEDE] ">
+      <div className='m-auto md:w-[40%] border-x-[1px] bg-gradient-to-b from-blue-500 to-blue-700 border-gray-400 md:px-[10px] px-2 w-full'>
+        <div className='m-auto text-center px-1 flex pt-6 md:justify-center pb-7 md:items-center w-full '>
+          <input ref={inputRef} className='w-full font-medium py-3 pr-2 text-[17px] border-2  border-white pl-4 text-gray-500 rounded-full bg-white outline-none' type="text" placeholder="Enter song" />
           <button onClick={musicSearch} className='py-3 bg-white ml-1 px-6 md:px-6 rounded-full text-blue-500 font-medium border-2 outline-none border-white'>Search</button>
         </div>
         <p className='text-white mt-2 pl-4 m-auto justify-center'>{inputEmpty}</p>
         {loading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
+        {error && <p>{error}</p>}
         {tracks.length > 0 && (
           <div className='flex  w-full md:w-[90%] px-3 m-auto flex-col justify-center'>
-            <h2 className='text-[25px] font-semibold mt-6 mb-2 text-gray-300'>Tracks:</h2>
+            <h2 className='text-[25px] font-bold mt-6 mb-2 text-gray-200'>Tracks:</h2>
             {tracks.map((track, index) => (
               <div className='mb-14' key={index}>
                 <img className='w-full' src={track.track.images.coverart} alt={`Cover for ${track.track.title}`} />
