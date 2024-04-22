@@ -49,7 +49,7 @@ function SearchSong() {
   
 
   return (
-    <div className="min-h-screen text-white bg-[#DEDEDE] ">
+    <div className="min-h-screen text-white bg-[#fff] ">
       <div className='m-auto md:w-[40%] border-x-[1px] bg-gradient-to-b from-blue-500 to-blue-700 border-gray-400 md:px-[10px] px-2 w-full'>
         <div className='m-auto text-center px-1 flex pt-6 md:justify-center pb-7 md:items-center w-full '>
           <input ref={inputRef} className='w-full font-medium py-3 pr-2 text-[17px] border-2  border-white pl-4 text-gray-500 rounded-full bg-white outline-none' type="text" placeholder="Enter song" />
