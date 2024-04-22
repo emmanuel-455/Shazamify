@@ -1,11 +1,11 @@
-import SearchSong from "./page/SearchSong"
+import SearchForm from "./page/SearchForm"
 
 function App() {
  
 
   return (
     <>
-      <SearchSong />
+      <SearchForm />
     </>
   )
 }
